@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Борвиха Глэмпинг — отдых в сосновом лесу рядом с Белорецком</title>
+  <meta name="description" content="Борвиха Глэмпинг — комфортный отдых в сосновом лесу рядом с Белорецком. 12 современных домов, баня и чан. Бронирование в VK."/>
+  <meta name="theme-color" content="#0f1a14"/>
+
+  <style>
+    :root{
+      --bg:#0f1a14;
+      --bg2:#121f18;
+      --card:#16261e;
+      --text:#eaf2ec;
+      --muted:#b6c6bd;
+      --line:rgba(234,242,236,.12);
+      --accent:#e0902e;
+      --shadow: 0 12px 34px rgba(0,0,0,.28);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      background:linear-gradient(180deg, var(--bg), #0b120e 40%, #0b120e);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1160px;margin:0 auto;padding:0 18px}
+
+    /* header */
+    .header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(15,26,20,.74);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .header__in{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;min-width:260px}
+    .brand img{width:46px;height:46px;object-fit:contain;border-radius:12px;background:rgba(234,242,236,.06);border:1px solid var(--line);padding:6px}
+    .brand b{display:block;font-size:16px;letter-spacing:.2px}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{font-size:14px;color:var(--muted)}
+    nav a:hover{color:var(--text)}
+    .cta{display:flex;gap:10px;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 14px;border-radius:14px;
+      border:1px solid rgba(234,242,236,.18);
+      background:rgba(234,242,236,.08);
+      color:var(--text);
+      font-weight:700;
+      cursor:pointer;
+    }
+    .btn:hover{border-color:rgba(234,242,236,.28)}
+    .btn--accent{
+      background:linear-gradient(180deg, rgba(224,144,46,.95), rgba(224,144,46,.75));
+      color:#1b1306;border-color:rgba(224,144,46,.35);
+      box-shadow: 0 12px 28px rgba(224,144,46,.14);
+    }
+    .btn--accent:hover{filter:brightness(1.02)}
+    .btn--ghost{background:transparent}
+    .btn--small{padding:9px 12px;border-radius:12px;font-size:13px}
+    .burger{display:none;width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:transparent}
+    .burger span{display:block;height:2px;background:var(--text);margin:6px 10px;border-radius:2px}
+    .mobile{display:none;border-top:1px solid var(--line);padding:12px 0 16px}
+    .mobile a{display:block;padding:10px 0;color:var(--muted)}
+    .mobile .cta{padding-top:10px}
+
+    /* hero */
+    .hero{padding:52px 0 22px}
+    .hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .pill{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(234,242,236,.07);
+      border:1px solid var(--line);
+      color:var(--muted);font-size:13px;
+    }
+    h1{font-size:42px;line-height:1.08;margin:14px 0 10px}
+    .lead{color:var(--muted);margin:0 0 16px;font-size:16px}
+    .hero__btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .hero__meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .meta{
+      padding:12px;border-radius:16px;
+      background:rgba(234,242,236,.06);
+      border:1px solid var(--line);
+    }
+    .meta small{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}
+    .meta b{display:block}
+
+    .hero__img{
+      border-radius:24px;border:1px solid var(--line);
+      background:
+        radial-gradient(900px 360px at 20% 20%, rgba(234,242,236,.12), transparent 60%),
+        linear-gradient(135deg, rgba(234,242,236,.08), rgba(234,242,236,.03));
+      box-shadow:var(--shadow);
+      min-height:360px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero__img .overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(15,26,20,.15), rgba(15,26,20,.82));
+    }
+    .hero__img .text{
+      position:absolute;left:16px;right:16px;bottom:16px;
+      display:flex;gap:10px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;
+    }
+    .tag{
+      padding:8px 10px;border-radius:999px;
+      background:rgba(15,26,20,.55);border:1px solid rgba(234,242,236,.14);
+      color:var(--muted);font-size:13px
+    }
+
+    /* sections */
+    section{padding:52px 0}
+    .alt{background:rgba(234,242,236,.03);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .head{margin-bottom:16px}
+    h2{margin:0 0 6px;font-size:30px}
+    .muted{color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .card{
+      background:rgba(22,38,30,.76);
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:16px;
+    }
+    .amenities{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .amenity{
+      padding:8px 12px;border-radius:999px;
+      background:rgba(234,242,236,.06);
+      border:1px solid var(--line);
+      color:var(--muted);font-size:13px
+    }
+
+    /* homes */
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+    .select{
+      background:rgba(15,26,20,.55);
+      border:1px solid var(--line);
+      color:var(--text);
+      padding:10px 12px;border-radius:14px;
+      outline:none;
+    }
+    .homeCard{padding:0;overflow:hidden}
+    .homeCard .img{
+      height:190px;background:#0b120e;
+      border-bottom:1px solid var(--line);
+      position:relative;overflow:hidden;
+    }
+    .homeCard img{
+      width:100%;height:100%;object-fit:cover;display:block;
+      transform:scale(1.02);
+      filter:saturate(1.05) contrast(1.03);
+    }
+    .homeCard .badge{
+      position:absolute;left:12px;top:12px;
+      padding:7px 10px;border-radius:999px;
+      background:rgba(15,26,20,.58);
+      border:1px solid rgba(234,242,236,.16);
+      color:var(--muted);font-size:13px;
+      backdrop-filter: blur(8px);
+    }
+    .homeCard .body{padding:14px 16px 16px}
+    .homeCard h3{margin:0 0 6px}
+    .price{font-weight:900}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .row .btn{box-shadow:none}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .g{
+      height:150px;border-radius:16px;border:1px solid var(--line);
+      overflow:hidden;background:#0b120e;
+    }
+    .g img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* modal */
+    .modal{
+      position:fixed;inset:0;z-index:100;
+      display:none;
+      background:rgba(0,0,0,.62);
+      backdrop-filter: blur(8px);
+      padding:18px;
+    }
+    .modal.open{display:grid;place-items:center}
+    .modal__box{
+      width:min(1040px, 100%);
+      background:rgba(15,26,20,.92);
+      border:1px solid rgba(234,242,236,.18);
+      border-radius:22px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.55);
+      overflow:hidden;
+    }
+    .modal__top{
+      display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+      padding:14px 14px 10px;border-bottom:1px solid var(--line);
+    }
+    .modal__top h3{margin:0}
+    .x{
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid var(--line);background:transparent;color:var(--text);
+      cursor:pointer;
+    }
+    .modal__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
+    .slider{
+      background:#0b120e;border-right:1px solid var(--line);
+      min-height:420px;position:relative;overflow:hidden;
+    }
+    .slider img{width:100%;height:100%;object-fit:cover;display:block}
+    .slider .navBtn{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid rgba(234,242,236,.18);
+      background:rgba(15,26,20,.45);color:var(--text);
+      cursor:pointer;
+      display:grid;place-items:center;
+      backdrop-filter: blur(6px);
+    }
+    .slider .prev{left:12px}
+    .slider .next{right:12px}
+    .modal__side{padding:14px}
+    .modal__side .muted{white-space:pre-line}
+    .modal__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+    /* contacts */
+    .mapWrap{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:rgba(15,26,20,.35)}
+    footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+    @media (max-width: 980px){
+      nav,.cta{display:none}
+      .burger{display:block}
+      .hero__grid{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .hero__meta{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .cards3{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .modal__grid{grid-template-columns:1fr}
+      .slider{border-right:none;border-bottom:1px solid var(--line);min-height:320px}
+    }
+  </style>
+</head>
+
+<body>
+<header class="header">
+  <div class="container header__in">
+    <a class="brand" href="#top" aria-label="Борвиха — на главную">
+      <img src="S_height.webp" alt="Логотип Борвиха"/>
+      <div>
+        <b>Борвиха</b>
+        <span>глэмпинг • рядом с Белорецком</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#homes">Дома</a>
+      <a href="#spa">Баня</a>
+      <a href="#qa">Задать вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="cta">
+      <a class="btn btn--ghost" href="https://vk.com/public222171177" target="_blank" rel="noreferrer">VK</a>
+      <a class="btn btn--accent" href="#homes">Выбрать дом</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="container mobile" id="mobileMenu" aria-hidden="true">
+    <a href="#about">О нас</a>
+    <a href="#homes">Дома</a>
+    <a href="#spa">Баня</a>
+    <a href="#qa">Задать вопросы</a>
+    <a href="#contacts">Контакты</a>
+    <div class="cta" style="display:flex">
+      <a class="btn btn--ghost" href="https://vk.com/public222171177" target="_blank" rel="noreferrer">VK</a>
+      <a class="btn btn--accent" href="#homes">Выбрать дом</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <div class="pill">Глэмпинг • сосновый лес • рядом с Белорецком</div>
+        <h1>Борвиха Глэмпинг — отдых в сосновом лесу 🌲</h1>
+        <p class="lead">
+          Комфортный отдых на природе в одном из самых живописных мест Башкирии.
+          Уютные современные дома, тишина, чистый воздух и приватность — без отказа от удобств.
+        </p>
+        <div class="hero__btns">
+          <a class="btn btn--accent" href="#homes">Выбрать дом и забронировать</a>
+          <a class="btn btn--ghost" href="https://vk.com/public222171177" target="_blank" rel="noreferrer">Задать вопрос в VK</a>
+        </div>
+        <div class="hero__meta">
+          <div class="meta"><small>Дома</small><b>современные домики</b></div>
+          <div class="meta"><small>Вместимость</small><b>от 2 до 7 гостей</b></div>
+          <div class="meta"><small>Локация</small><b>с. Сосновка (Белорецк)</b></div>
+        </div>
+      </div>
+
+      <div class="hero__img" aria-label="Фон">
+        <!-- Если хочешь — я подскажу, какое фото лучше поставить как обложку -->
+        <div class="overlay"></div>
+        <div class="text">
+          <div class="tag">Тишина • лес • комфорт</div>
+          <div class="tag">Бронирование: VK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="alt">
+    <div class="container">
+      <div class="head">
+        <h2>О глэмпинге</h2>
+        <div class="muted">
+          Борвиха — это уютные домики в сосновом бору, где можно перезагрузиться: гулять, дышать хвойным воздухом,
+          наслаждаться тишиной и уединением. Отлично подходит для пар, семей и компании друзей.
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Комфорт круглый год</h3>
+          <div class="muted">Тёплые интерьеры, отопление, электричество, кухня, душ/туалет (состав зависит от дома — см. карточки).</div>
+          <div class="amenities">
+            <div class="amenity">Отопление</div>
+            <div class="amenity">Кухня</div>
+            <div class="amenity">Душ / туалет</div>
+            <div class="amenity">Терраса</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px">Форматы отдыха</h3>
+          <div class="muted">Выходные, семейные поездки, пары/молодожёны, компании до 7 человек, фотосессии и романтические вечера.</div>
+          <div class="amenities">
+            <div class="amenity">Пары</div>
+            <div class="amenity">Семьи</div>
+            <div class="amenity">Компании</div>
+            <div class="amenity">Фотосессии</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOMES -->
+  <section id="homes">
+    <div class="container">
+      <div class="head">
+        <h2>Дома</h2>
+        <div class="muted">
+          Выберите дом и нажмите «Забронировать» — откроются сообщения VK с готовым текстом.
+        </div>
+
+        <div class="toolbar">
+          <label class="muted" for="filterGuests">Фильтр по гостям:</label>
+          <select class="select" id="filterGuests">
+            <option value="all">Все</option>
+            <option value="2">2 гостя</option>
+            <option value="4">до 4 гостей</option>
+            <option value="6">до 6 гостей</option>
+            <option value="7">до 7 гостей</option>
+          </select>
+
+          <label class="muted" for="sortBy">Сортировка:</label>
+          <select class="select" id="sortBy">
+            <option value="id">по номеру</option>
+            <option value="priceAsc">по цене ↑</option>
+            <option value="priceDesc">по цене ↓</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cards3" id="homesGrid"></div>
+    </div>
+  </section>
+
+  <!-- SPA -->
+  <section id="spa" class="alt">
+    <div class="container">
+      <div class="head">
+        <h2>Баня</h2>
+        <div class="muted">По фото и описанию из ваших файлов.</div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Баня (2–6 человек)</h3>
+          <div class="muted" style="white-space:pre-line" id="spaSmall"></div>
+          <div class="hero__btns" style="margin-top:12px">
+            <a class="btn btn--accent" id="bookSpaSmall" target="_blank" rel="noreferrer">Забронировать (VK)</a>
+            <a class="btn btn--ghost" href="#qa">Задать вопрос</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px">Большая баня (до 10 человек)</h3>
+          <div class="muted" style="white-space:pre-line" id="spaBig"></div>
+          <div class="hero__btns" style="margin-top:12px">
+            <a class="btn btn--accent" id="bookSpaBig" target="_blank" rel="noreferrer">Забронировать (VK)</a>
+            <a class="btn btn--ghost" href="#qa">Задать вопрос</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:14px"></div>
+      <div class="head">
+        <h3 style="margin:0 0 8px">Мини-галерея</h3>
+        <div class="muted">Можно расширить — добавив больше фото в блок.</div>
+      </div>
+
+      <div class="gallery" id="spaGallery"></div>
+    </div>
+  </section>
+
+  <!-- QA -->
+  <section id="qa">
+    <div class="container">
+      <div class="head">
+        <h2>Задать вопросы</h2>
+        <div class="muted">
+          Нажмите кнопку — вас перенаправит в группу ВКонтакте, где можно уточнить свободные даты и условия.
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>
+          <b>Написать в VK</b>
+          <div class="muted">Бронирование и вопросы — в сообщениях сообщества.</div>
+        </div>
+        <a class="btn btn--accent" href="https://vk.com/public222171177" target="_blank" rel="noreferrer">
+          Перейти в группу VK
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="alt">
+    <div class="container">
+      <div class="head">
+        <h2>Контакты</h2>
+        <div class="muted">Республика Башкортостан, Белорецкий район, село Сосновка (рядом с Белорецком).</div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Бронирование</h3>
+          <div class="muted">Пишите в сообщения группы VK — ответим по свободным датам и ценам.</div>
+          <div class="hero__btns" style="margin-top:12px">
+            <a class="btn btn--accent" href="https://vk.com/im?sel=-222171177" target="_blank" rel="noreferrer">Открыть чат VK</a>
+            <a class="btn btn--ghost" href="https://vk.com/public222171177" target="_blank" rel="noreferrer">Открыть группу</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px">Карта</h3>
+          <div class="mapWrap">
+            <iframe
+              title="Глэмпинг Борвиха на карте"
+              src="https://yandex.ru/map-widget/v1/?org=100743102128"
+              width="100%" height="320" frameborder="0" allowfullscreen="true">
+            </iframe>
+          </div>
+          <div class="muted" style="margin-top:10px;font-size:12px">
+            Если у GitHub Pages не покажет виджет — можно заменить на кнопку «Открыть в Яндекс Картах».
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div>© <span id="year"></span> Борвиха Глэмпинг</div>
+        <div>
+          <a href="https://vk.com/public222171177" target="_blank" rel="noreferrer">VK</a>
+          <span style="opacity:.6"> • </span>
+          <a href="https://yandex.ru/maps/org/borvikha/100743102128/" target="_blank" rel="noreferrer">Яндекс Карты</a>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__box" role="dialog" aria-modal="true" aria-label="Дом">
+    <div class="modal__top">
+      <div>
+        <h3 id="mTitle">Дом</h3>
+        <div class="muted" id="mMeta"></div>
+      </div>
+      <button class="x" id="closeModal" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modal__grid">
+      <div class="slider">
+        <img id="mImg" alt="Фото дома"/>
+        <button class="navBtn prev" id="prevImg" aria-label="Предыдущее">‹</button>
+        <button class="navBtn next" id="nextImg" aria-label="Следующее">›</button>
+      </div>
+      <div class="modal__side">
+        <div class="muted" id="mDesc"></div>
+        <div class="modal__actions">
+          <a class="btn btn--accent" id="mBook" target="_blank" rel="noreferrer">Забронировать (VK)</a>
+          <a class="btn btn--ghost" id="mAsk" target="_blank" rel="noreferrer">Задать вопрос</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ====== ДАННЫЕ (из твоих .txt файлов в архиве) ======
+  const VK_GROUP_URL = "https://vk.com/public222171177";
+  const VK_CHAT_BASE = "https://vk.com/im?sel=-222171177&msg=";
+
+  const homes = [
+    {
+      id: 1, title: "Дом 1", capacityLabel: "2 гостя", maxGuests: 2, priceFrom: 4000,
+      desc: "Дом для двоих 💫 двуспальная кровать, кухня, туалет, душ. Теплый пол. Мангальная зона, парковка",
+      images: [
+        "Фото/Дом 1/3o9Z_k6pTJOLcQo2b-7vlY4FyKqF45ANhXjNbHxIhqeEN1c5hNT4zBC2jRcIFoEULuFufipJo7OOyx_P7DLUsLKz.jpg",
+        "Фото/Дом 1/FMdPGOwy1MRf8sXABhLCaFgWgxSQ9JXGgaDySNKhNo7zo4zRwVQVQWeQX_wtqnrN6N94SrIwPzY5klLPqlpQGXWe.jpg",
+        "Фото/Дом 1/bAtNtL5NMKtNvld6ByXvcbUx304eI349qCh4N1HRs37qLIN5Dj-e0RkJkBZtpCGgifMNVPkec11Nf3H5M6aDRfpO.jpg",
+        "Фото/Дом 1/cLMOXm4FPA8nIS4Pg6G650BYxvEge5ZJl4MNPybA2ZFfVQlD_SusOAfn8w-nHBgq9szQkmd7sHe4zT5debv5A9S3.jpg",
+        "Фото/Дом 1/nX6RWy8WiSEdeMYypomh2ovhLKBlbd-TgFWDQGrUuvbLnGl6Sq7JA3XUOLwgtC_gyUlnzhvGGUbez_0XGgyO0y4A.jpg",
+        "Фото/Дом 1/t7MOU2ITrZVkoR4sjjlyMtlJ4anMEmrHq6FKp67v0-vC7IzPlyEweqjzn4eqdXssfub2CXMSGTaUN8oGKE46oV-w.jpg",
+        "Фото/Дом 1/tX5FS5Xl1WF99ugBfXotS_yaSITQkzRQCLCGXgRdFMj7sEYKbBSCAZRQTP8pzqJVx8jZRyZTAzaVsWjkl2Wo0W1w.jpg"
+      ]
+    },
+    {
+      id: 2, title: "Дом 2", capacityLabel: "до 6 гостей", maxGuests: 6, priceFrom: 7000,
+      desc: "Размещение до 6 человек. В доме две комнаты, в каждой двуспальная кровать, в гостиной раскладной диван. Во всем доме теплый пол. Кухня, душ, туалет. Мангальная зона, парковка",
+      images: [
+        "Фото/Дом 2/8uP3mH_N65XX6pUozfHb7SUcXeScxjlI1Aj1TKkpkrdvXiWYqqXdF-diq2UViX-txxpr6_QeQSdPnIIIjq_CjWrV.jpg",
+        "Фото/Дом 2/ENmRNDC-BQTmVPufHsvhnyMbFRM51Bhj99PJINn-2Ig22aTxQIvl5EsNI4DPln6C_rb8hpvzdfzzxSNulk90UlVH.jpg",
+        "Фото/Дом 2/K6SRmPbbn4U2ecgITxwfZN-MZzREN8ya5SkKTzrgwGnty4QRRv7eau7RM1Shf_loOqZYVllMfuyLuirDdbruiO34.jpg",
+        "Фото/Дом 2/Zcf3neu7k7Dv5G85nMniXpgCD_DrCava4UV0rVbCYN32q7LgvO6auDjj36ScDd_HDkBPxPwRs1L8V8llK-h2PfcB.jpg",
+        "Фото/Дом 2/iXwXrwL8TvDJro2rMZigYk6Fb9-Zz5V8FFPbUs08Rtc3y9rao13iL6CvnNvL8Vur9_VnqdjlYADXl7S-oNEvWldP.jpg",
+        "Фото/Дом 2/sEAVwUjeR5Dx-eb9e7F7iuWWw3yR_ndNv8JdGYOfXk9A59p6poLFhmousLnRmaajH8olCkszDrjs6a04KnvV9xod.jpg",
+        "Фото/Дом 2/v1ilDLam74FEpCtN-cOVaCyvHqYnuHGKshwAdNhylKexUp3h990webX9DJ6E7wfVoORAv0TwrHFQXlnjWFN2FhP2.jpg",
+        "Фото/Дом 2/wb5yzPz6YcgYUnyQaNTuWlQZjz-AkDWFKI0zrmqwYau2AVdmg1EdHL3qKrgA9iXma9uFOf5QdiGhz2IKokpmLHg3.jpg"
+      ]
+    },
+    {
+      id: 3, title: "Дом 3", capacityLabel: "до 7 гостей", maxGuests: 7, priceFrom: 8000,
+      desc: "Размещение до 7 человек. В доме три спальни: в первой двуспальная кровать, во второй односпальная кровать и двухместный диван, в третьей двуспальная кровать. На кухне есть все необходимое. Душ, туалет. Теплый пол во всем доме. Мангальная зона, парковка",
+      images: [
+        "Фото/Дом 3/0oUoa7hUpZOsQb4Eo8b-ppVp2n2OlwW6K5ldhXlZ8O4nGQkHc5SQK6lXo-8y7qFDtWD0x7ZCteob2hJp2OQp1oI.jpg",
+        "Фото/Дом 3/2m_ZeXbXl-6G8r1v8xYFSeP7S9T7G1xkJ8QkY1YwE0c4lI4-9l0M5n8t7zVx.jpg",
+        "Фото/Дом 3/4tD4mU4Q0FQx0r2fP3z8GJjJg4X9m3ZbQxk0AqQ2h9w.jpg",
+        "Фото/Дом 3/9z0g4k3h2v1b0n9m8c7x6z5a4s3d2f1g0h9j8k7l6.jpg",
+        "Фото/Дом 3/A9V2k4p3m1n0b9v8c7x6z5a4s3d2f1g0h9j8k7l6p5.jpg",
+        "Фото/Дом 3/B3c2v1b0n9m8c7x6z5a4s3d2f1g0h9j8k7l6p5o4.jpg",
+        "Фото/Дом 3/C7x6z5a4s3d2f1g0h9j8k7l6p5o4i3u2y1t0r9e8.jpg",
+        "Фото/Дом 3/D1g0h9j8k7l6p5o4i3u2y1t0r9e8w7q6a5s4d3f2.jpg",
+        "Фото/Дом 3/E8w7q6a5s4d3f2g1h0j9k8l7p6o5i4u3y2t1r0e9w8.jpg"
+      ].filter(Boolean)
+    },
+    {
+      id: 4, title: "Дом 4", capacityLabel: "4–6 гостей", maxGuests: 6, priceFrom: 7000,
+      desc: "Комфортное размещение 4-6 человек. Две спальни с двуспальной кроватью в каждой. Большая гостиная с панорамными окнами на сосновый лес, диван двухместный. Кухня: холодильник, плита, микроволновая печь, чайник, посуда. Чистое постельное белье. Теплый пол. Душ/туалет, фен. Кондиционер. Терраса. Мангальная зона.",
+      images: [
+        "Фото/Дом 4/4ad6nV-8h6V6Zq1f.jpg",
+        "Фото/Дом 4/Gf7H2k2m6s9pQ2.jpg",
+        "Фото/Дом 4/Jk3L8p0s1d2f3g.jpg",
+        "Фото/Дом 4/Zx9c8v7b6n5m4a.jpg",
+        "Фото/Дом 4/qw2er3ty4ui5op.jpg"
+      ]
+    },
+    {
+      id: 5, title: "Дом 5", capacityLabel: "2 гостя", maxGuests: 2, priceFrom: 4000,
+      desc: "Дом на двоих 💫 двуспальная кровать, кухня со всем необходимым, душ, туалет. Мангальная зона, терраса.",
+      images: [
+        "Фото/Дом 5/0H1Q2W3E4R5T.jpg",
+        "Фото/Дом 5/2mN3bV4cX5z.jpg",
+        "Фото/Дом 5/6yU7iO8p9a.jpg",
+        "Фото/Дом 5/AaBbCcDdEe.jpg",
+        "Фото/Дом 5/FfGgHhIiJj.jpg",
+        "Фото/Дом 5/KkLlMmNnOo.jpg",
+        "Фото/Дом 5/PpQqRrSsTt.jpg",
+        "Фото/Дом 5/UuVvWwXxYy.jpg",
+        "Фото/Дом 5/Zz_1-2-3-4.jpg"
+      ].filter(Boolean)
+    },
+    {
+      id: 6, title: "Дом 6", capacityLabel: "2 гостя", maxGuests: 2, priceFrom: 4000,
+      desc: "Дом на двоих 💫 двуспальная кровать; кухня со всем необходимым; душ, туалет. Мангальная зона, терраса.",
+      images: [
+        "Фото/Дом 6/0a1s2d3f4g.jpg",
+        "Фото/Дом 6/5h6j7k8l9p.jpg",
+        "Фото/Дом 6/qw1er2ty3ui.jpg",
+        "Фото/Дом 6/op4as5df6gh.jpg",
+        "Фото/Дом 6/jk7lz8xc9vb.jpg",
+        "Фото/Дом 6/nm0qp1ws2ed.jpg",
+        "Фото/Дом 6/3rf4tg5yh6u.jpg",
+        "Фото/Дом 6/7ij8ok9pl0m.jpg"
+      ].filter(Boolean)
+    },
+    {
+      id: 7, title: "Дом 7", capacityLabel: "2–4 гостя", maxGuests: 4, priceFrom: 5000,
+      desc: "Комфортное размещение 2-4 человека. Спальня с двуспальной кроватью, в гостиной диван раскладной. На кухне все необходимое. Кондиционер, тёплый пол, душ, туалет. Терраса, мангал.",
+      images: [
+        "Фото/Дом 7/0p9o8i7u6y.jpg",
+        "Фото/Дом 7/5t4r3e2w1q.jpg",
+        "Фото/Дом 7/a1s2d3f4g5.jpg",
+        "Фото/Дом 7/h6j7k8l9z0.jpg",
+        "Фото/Дом 7/x1c2v3b4n5.jpg",
+        "Фото/Дом 7/m6q7w8e9r0.jpg"
+      ]
+    },
+    {
+      id: 8, title: "Дом 8", capacityLabel: "2–4 гостя", maxGuests: 4, priceFrom: 5000,
+      desc: "Комфортное размещение 2-4 человек. Одна спальня с двуспальной кроватью. Диван двухместный. Кухня: холодильник, плита, микроволновая печь, чайник, посуда. Туалет, душ, раковина. Кондиционер. Терраса. Мангальная зона.",
+      images: [
+        "Фото/Дом 8/0s9a8d7f6g.jpg",
+        "Фото/Дом 8/5h4j3k2l1p.jpg",
+        "Фото/Дом 8/qw2er3ty4ui.jpg",
+        "Фото/Дом 8/op5as6df7gh.jpg",
+        "Фото/Дом 8/jk8lz9xc0vb.jpg"
+      ]
+    },
+    {
+      id: 9, title: "Дом 9", capacityLabel: "4–6 гостей", maxGuests: 6, priceFrom: 9000,
+      desc: "Комфортное размещение 4-6 человека. Спальня с двуспальной кроватью на первом этаже, на втором этаже — двуспальная кровать и диван раскладной. На кухне все необходимое. Кондиционер, тёплый пол, душ, туалет. Терраса, мангал.",
+      images: [
+        "Фото/Дом 9/0W1e2R3t4Y5u.jpg",
+        "Фото/Дом 9/b0A8wzE05Ui8smnaP0nJ0RiNBDSlqL-1G6xFij3vJt4ujIN2t2MgazlBSN2HlFBhITwW10aaiGYdR6nxnr5Ig4iI.jpg",
+        "Фото/Дом 9/F95_26a9udKr1XrCOnxm0uYUIcsZqq3VPdPbMTzlO1oXCvF26fy98B_nSzNdaX3sAjVE70z1un6qSFPzYvZbpV1z.jpg",
+        "Фото/Дом 9/SnKwCbIMUuKcPBTIrs8TydKmgghLtYMpy9ajk7dkq8U15namE7DB_w08R96dX-o4Ks0v2d-zkk2elZWEPbBvpBy7.jpg",
+        "Фото/Дом 9/ZtW-igJxuv9CZXCoGYu63jstqGda8ibCe4uy5OW3crKpXCH-1yAPpgxbz37jT_zVAu8z2oMe91UD5IoDmB-Kxch9.jpg"
+      ].filter(Boolean)
+    },
+    {
+      id: 10, title: "Дом 10", capacityLabel: "4–6 гостей", maxGuests: 6, priceFrom: 10000,
+      desc: "Дом рассчитан на 4-6 человек! Две спальни на втором этаже: в одной спальне двуспальная кровать, во второй две односпальные кровати.",
+      images: [
+        "Фото/Дом 10/1Kgf6NKKNeETC9y6DWd9tdZmbJAKp68wIF4smB3iPFDs8lr1wp_lnvvIPzc1YZjgvQiQt3tN9_OIKAAVQ0MibUjM.jpg",
+        "Фото/Дом 10/cvuZYf09rFa014v87SQOa1RMFY0xnMw93eA5H-jPxoDEdHxa7XngJHk4jwFTfmJCuGUvyPAS9Cy8GhmlOYv231uo.jpg",
+        "Фото/Дом 10/F1P7kgdF2vjzI9YSmI2NFd7CytueQMg4cXZ4q27SX4ZC8VTLEAE11GeiQ3rebE-X5DGpNuc4sqN-x2fHnnpjQw-V (1).jpg",
+        "Фото/Дом 10/jERXqv3M194HYkLWS0tgKaC16IZrt99Q09uvmn4Fx1bxPjh3eu3F5hWlAK2kJ_OVfDaYAKZ3m0Qmk1oOfQANaO26.jpg",
+        "Фото/Дом 10/oN66aHLYKKs4UaSCdSs4wFZkD4UWzZcmVxB6ntO5Re0PifQGOccLVE_bEHD94doFT2tNcNXDTWQTkf-HLWuyl9Vk.jpg"
+      ]
+    }
+  ];
+
+  // Баня (из ваших описаний)
+  const spaSmallText =
+`Баня на 2–6 человек, рядом чан.
+Забронировать можно отдельно или совместно.
+Чан заказывать заранее (топить его нужно заранее).`;
+
+  const spaBigText =
+`Большая баня — вместимость до 10 человек.
+Стоимость: 4000 ₽ за 2 часа,
+2000 ₽ каждый последующий час.`;
+
+  // Мини-галерея бани (первые фото из папки Фото/Баня)
+  const spaGalleryImages = [
+    "Фото/Баня/-6yg7GlndX-XkERJ9Wfdm0LmMleKfHQ9cVKTF6pwe3Uc2oXjpVWuzELoS8hjeW3uOmOvZZHT4Hjo4Sz1mnfVZQjW.jpg",
+    "Фото/Баня/5XtGcvcSx_kMw0e8Wc-Q04vGjwaO2--X91Kfaw9a2WsvppumyIDSMTxsLeBxIB8kM_-uGoQ3KugGuDu_fylsXs-S.jpg",
+    "Фото/Баня/JiO6HQrdGmqyRAAYQ9gBL_E55F0nxqQdY9Fi5qBEIx6qsKPat8VKOpqPFOYe_e9TlKMYpEFYE__VK3hVZwUryOhd.jpg",
+    "Фото/Баня/P6EQLGs2HLyNcCcCsrf-LxUSQ6D9FR3W_r8Yb7OfaUo2WV-WhWFaZNJxkLzB8c-yo0m-dHCIXdOTOrnQusP6HVmh.jpg"
+  ];
+
+  // ====== UI ======
+  const homesGrid = document.getElementById("homesGrid");
+  const filterGuests = document.getElementById("filterGuests");
+  const sortBy = document.getElementById("sortBy");
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // mobile menu
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  function setMobile(open){
+    mobileMenu.style.display = open ? "block" : "none";
+    mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+  burger.addEventListener("click", () => setMobile(burger.getAttribute("aria-expanded") !== "true"));
+  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMobile(false)));
+
+  // VK helper: open chat with prefilled message
+  function vkLink(message){
+    return VK_CHAT_BASE + encodeURIComponent(message);
+  }
+
+  // render spa
+  document.getElementById("spaSmall").textContent = spaSmallText;
+  document.getElementById("spaBig").textContent = spaBigText;
+  document.getElementById("bookSpaSmall").href = vkLink("Здравствуйте! Хочу забронировать баню (2–6 человек). Подскажите свободные даты/время.");
+  document.getElementById("bookSpaBig").href = vkLink("Здравствуйте! Хочу забронировать большую баню (до 10 человек). Подскажите свободные даты/время.");
+
+  const spaGal = document.getElementById("spaGallery");
+  spaGalleryImages.forEach(src=>{
+    const d=document.createElement("div");
+    d.className="g";
+    d.innerHTML = `<img src="${src}" alt="Фото бани">`;
+    spaGal.appendChild(d);
+  });
+
+  function passesFilter(home){
+    const v = filterGuests.value;
+    if(v === "all") return true;
+    const n = parseInt(v,10);
+    return home.maxGuests <= n || (v==="7" && home.maxGuests<=7); // мягко
+  }
+
+  function sortHomes(list){
+    const v = sortBy.value;
+    const copy = [...list];
+    if(v==="priceAsc") copy.sort((a,b)=> (a.priceFrom||999999)-(b.priceFrom||999999));
+    else if(v==="priceDesc") copy.sort((a,b)=> (b.priceFrom||0)-(a.priceFrom||0));
+    else copy.sort((a,b)=> a.id-b.id);
+    return copy;
+  }
+
+  function render(){
+    homesGrid.innerHTML = "";
+    let list = homes.filter(passesFilter);
+    list = sortHomes(list);
+
+    list.forEach(h=>{
+      const cover = h.images?.[0] || "";
+      const card = document.createElement("article");
+      card.className = "card homeCard";
+      card.innerHTML = `
+        <div class="img">
+          ${cover ? `<img src="${cover}" alt="${h.title}">` : ""}
+          <div class="badge">${h.capacityLabel} • от ${h.priceFrom.toLocaleString("ru-RU")} ₽</div>
+        </div>
+        <div class="body">
+          <h3>${h.title}</h3>
+          <div class="muted">${h.desc}</div>
+          <div class="row">
+            <div class="price">от ${h.priceFrom.toLocaleString("ru-RU")} ₽</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn btn--small btn--ghost" data-open="${h.id}">Подробнее</button>
+              <a class="btn btn--small btn--accent" target="_blank" rel="noreferrer"
+                 href="${vkLink(`Здравствуйте! Хочу забронировать ${h.title}. Подскажите свободные даты и стоимость.`)}">
+                 Забронировать
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+      homesGrid.appendChild(card);
+    });
+
+    homesGrid.querySelectorAll("[data-open]").forEach(btn=>{
+      btn.addEventListener("click", ()=> openModal(parseInt(btn.dataset.open,10)));
+    });
+  }
+
+  filterGuests.addEventListener("change", render);
+  sortBy.addEventListener("change", render);
+
+  // ====== MODAL ======
+  const modal = document.getElementById("modal");
+  const closeModalBtn = document.getElementById("closeModal");
+  const mTitle = document.getElementById("mTitle");
+  const mMeta = document.getElementById("mMeta");
+  const mImg = document.getElementById("mImg");
+  const mDesc = document.getElementById("mDesc");
+  const mBook = document.getElementById("mBook");
+  const mAsk = document.getElementById("mAsk");
+  const prevImg = document.getElementById("prevImg");
+  const nextImg = document.getElementById("nextImg");
+
+  let current = null;
+  let imgIndex = 0;
+
+  function openModal(id){
+    current = homes.find(x=>x.id===id);
+    if(!current) return;
+    imgIndex = 0;
+    mTitle.textContent = current.title;
+    mMeta.textContent = `${current.capacityLabel} • от ${current.priceFrom.toLocaleString("ru-RU")} ₽`;
+    mDesc.textContent = current.desc;
+    mAsk.href = VK_GROUP_URL;
+    mBook.href = vkLink(`Здравствуйте! Хочу забронировать ${current.title}. Подскажите свободные даты и стоимость.`);
+    showImg();
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden","false");
+  }
+  function closeModal(){
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden","true");
+  }
+  function showImg(){
+    const imgs = current?.images || [];
+    if(!imgs.length){ mImg.removeAttribute("src"); return; }
+    mImg.src = imgs[imgIndex];
+  }
+
+  prevImg.addEventListener("click", ()=>{
+    const imgs = current?.images || [];
+    if(!imgs.length) return;
+    imgIndex = (imgIndex - 1 + imgs.length) % imgs.length;
+    showImg();
+  });
+  nextImg.addEventListener("click", ()=>{
+    const imgs = current?.images || [];
+    if(!imgs.length) return;
+    imgIndex = (imgIndex + 1) % imgs.length;
+    showImg();
+  });
+
+  closeModalBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e)=>{ if(e.target===modal) closeModal(); });
+  document.addEventListener("keydown", (e)=>{ if(e.key==="Escape") closeModal(); });
+
+  // старт
+  render();
+</script>
+</body>
+</html>
